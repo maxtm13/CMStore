@@ -59,6 +59,63 @@
       </div>
 
   </header>
+  <main class="сheckout">
+
+    <div class="container">
+      <h2 class="сheckout__title">Оформление заказа. Шаг 1 из 2</h2>
+      <div class="сheckout__wrapper">
+        <div class="сheckout__desc">
+          <div class="сheckout__account">
+            <div class="checkout__account_type">
+
+              <input type="radio" name="account-type" id="account-type-1" value="fiz" checked>
+              <label for="account-type-1">Физическое лицо</label>
+              <input type="radio" name="account-type" id="account-type-2" value="ur">
+              <label for="account-type-2">Юридическое лицо</label>
+
+
+              <div class="checkout__account_type-first"></div>
+              <div class="checkout__account_type-second"></div>
+            </div>
+            <div class="сheckout__account_city">
+              <div class="сheckout__account_city">Ваш город
+                <a class="сheckout__account_city-link" href="#!">Краснодар
+                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="#2A65C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M11.498 11.285a2.857 2.857 0 100-5.715 2.857 2.857 0 000 5.715z" />
+                      <path
+                        d="M17.214 11.286C15.07 16.286 11.499 22 11.499 22s-3.571-5.714-5.714-10.714C3.642 6.286 7.214 2 11.5 2s7.857 4.286 5.715 9.286z" />
+                    </g>
+                  </svg></a>
+
+              </div>
+              <!-- <div class="сheckout__account_city-name">
+                Краснодар
+                <i class="icon">
+                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="#2A65C5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M11.498 11.285a2.857 2.857 0 100-5.715 2.857 2.857 0 000 5.715z" />
+                      <path
+                        d="M17.214 11.286C15.07 16.286 11.499 22 11.499 22s-3.571-5.714-5.714-10.714C3.642 6.286 7.214 2 11.5 2s7.857 4.286 5.715 9.286z" />
+                    </g>
+                  </svg>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+        <div class="checkout__order_details">
+          <h3 class="checkout__order_details-title">Детали заказа</h3>
+          <div class="checkout__order_details_list"></div>
+          <div class="checkout__order_details_hl"></div>
+          <div class="checkout__order_details_total"></div>
+          <button>Далее</button>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
   <script src="js/main.min.js"></script>
 </body>
 

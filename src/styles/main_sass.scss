@@ -1,3 +1,4 @@
+/* main.css */
 *,
 *::after,
 *::before,
@@ -5,12 +6,20 @@ p,
 span {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 a {
     color: inherit;
     line-height: inherit;
     font-size: inherit;
+    text-decoration: none;
 }
 
 :root {
@@ -39,9 +48,9 @@ body {
 
 .container {
     max-width: 1514px;
-    width: calc(100% - 40px);
+    width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 
 }
 
@@ -49,6 +58,7 @@ body {
     background-color: var(--black);
     color: var(--white-text);
     padding: 19px 0;
+    margin-bottom: 40px;
 
     &__wrapper {
         display: flex;
@@ -73,8 +83,6 @@ body {
 }
 
 .btn__link {
-    // width: 201px;
-    // height: 44px;
     padding: 0 28.5px;
     border: 2px solid #5B5B6A;
     border-radius: 8px;
@@ -90,10 +98,110 @@ body {
     }
 }
 
+.box {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+
+    &.green {
+        background-color: green;
+    }
+}
+
+.сheckout {
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.22;
+        margin-bottom: 24px;
+
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__desc {
+        width: calc(100% * 7 / 12);
+        padding: 20px 32px;
+        border: 1px solid #E1E1E3;
+        border-radius: 12px;
+    }
+
+    &__order_details {
+        width: 440px;
+    }
+
+
+    &__account {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__account_city {
+        display: inline;
+
+        &-link {
+            color: #2A65C5;
+
+            // display: inline;
+            & svg {
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    &__account_type input[type=radio] {
+        display: none;
+
+    }
+
+    &__account_type label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 25px;
+        margin-right: 0;
+        line-height: 18px;
+        user-select: none;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            border: 1px solid #d7d7d7;
+            border-radius: 20px;
+            // background: url() 0 0 no-repeat;
+        }
+    }
+}
+
+
+
+
+
+/*
+сheckout__account
+checkout__account
+
+
+/* adative*/
+@media (max-width:1920px) {
+    .container {
+        width: 1346px;
+        padding: 0;
+    }
+}
+
 @media (max-width:1440px) {
     .container {
-        max-width: 1346px;
-        width: calc(100% - 40px);
+        width: 100%;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -102,13 +210,18 @@ body {
 
 @media (max-width:1024px) {
     .container {
-        width: calc(100% - 40px);
-        padding: 0 20px;
+        // padding: 0 20px;
     }
 
 }
 
 @media (max-width:768px) {
+    .container {
+
+        padding: 0 12px;
+    }
+
+
     .header {
         padding: 21.5px 0;
     }
@@ -136,6 +249,7 @@ body {
 }
 
 @media (max-width:375px) {
+
     .header {
         padding: 12px 0;
     }
@@ -145,11 +259,7 @@ body {
 
     }
 
-    .btn__back_link-mobile {
-        margin-left: 8px;
-    }
-
-    .btn__link-mobile {
-        margin-right: 8px;
+    .header__wrapper {
+        margin: 0 8px;
     }
 }
